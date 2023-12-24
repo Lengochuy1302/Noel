@@ -116,6 +116,14 @@ function onEmailInput(e) {
 			TweenMax.to(tooth, 1, {x: 3, y: -2, ease: Expo.easeOut});
 			TweenMax.to(tongue, 1, {y: 2, ease: Expo.easeOut});
 			TweenMax.to([eyeL, eyeR], 1, {scaleX: .65, scaleY: .65, ease: Expo.easeOut, transformOrigin: "center center"});
+		} else if(value.toLowerCase().includes("thị hải")) {
+			render_question.innerHTML= "Chúng ta quen nhau từ lớp mấy?"
+			password.style.display = "block";
+			mouthStatus = "large";
+			TweenMax.to([mouthBG, mouthOutline, mouthMaskPath], 1, {morphSVG: mouthLargeBG, ease: Expo.easeOut});
+			TweenMax.to(tooth, 1, {x: 3, y: -2, ease: Expo.easeOut});
+			TweenMax.to(tongue, 1, {y: 2, ease: Expo.easeOut});
+			TweenMax.to([eyeL, eyeR], 1, {scaleX: .65, scaleY: .65, ease: Expo.easeOut, transformOrigin: "center center"});
 		} else if (value.length == 1) {
 			mouthStatus = "medium";
 			password.style.display = "none";
