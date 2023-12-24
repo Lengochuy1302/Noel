@@ -292,7 +292,7 @@ class Game {
         if (core >= 20) {
             $('.game-over h2').text('Bạn đã vượt quá thử thách');
             setTimeout(() => {
-                location.href = '/index2.html';
+                location.href = '/Noel/index2.html';
               }, 2000);
         }
         this.updateState(this.STATES.ENDED);
