@@ -170,7 +170,7 @@ $('#login').on('click', function() {
 	if (email.toLowerCase().includes("thanh loan") && password.toLowerCase() == "dí ơi") {
 		localStorage.setItem('password', 'Dí ơi');
 		location.href = '/Noel/index13.html';
-	} else if ((value.toLowerCase().includes("quang tùng") || value.toLowerCase().includes("hữu thọ") || value.toLowerCase().includes("tú anh") || value.toLowerCase().includes("phương loan") || value.toLowerCase().includes("phương nga") || value.toLowerCase().includes("yến nhi") || value.toLowerCase().includes("hoàng đạt") || value.toLowerCase().includes("quang thái") || value.toLowerCase().includes("phú đồng") || value.toLowerCase().includes("đức hiển") || value.toLowerCase().includes("thanh nhi") || value.toLowerCase().includes("quỳnh thương")) && (password.toLowerCase() == "ma sói")) {
+	} else if ((email.toLowerCase().includes("quang tùng") || email.toLowerCase().includes("hữu thọ") || email.toLowerCase().includes("tú anh") || email.toLowerCase().includes("phương loan") || email.toLowerCase().includes("phương nga") || email.toLowerCase().includes("yến nhi") || email.toLowerCase().includes("hoàng đạt") || email.toLowerCase().includes("quang thái") || email.toLowerCase().includes("phú đồng") || email.toLowerCase().includes("đức hiển") || email.toLowerCase().includes("thanh nhi") || email.toLowerCase().includes("quỳnh thương")) && (password.toLowerCase() == "ma sói")) {
 		localStorage.setItem('password', 'Ma sói');
 		location.href = '/Noel/index13.html';
 	} else if (email.toLowerCase().includes("thị hải") && password.toLowerCase() == "hải công chúa") {
