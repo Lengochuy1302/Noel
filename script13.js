@@ -1,6 +1,4 @@
-var lightswitch = document.getElementById("switch"),
-    on = false;
-lightswitch.addEventListener('click', toggleLights, false);
+
 
 TweenMax.set('.switchnob', {y: '+=90'})
 
