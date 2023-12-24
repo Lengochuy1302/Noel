@@ -108,18 +108,7 @@ function onEmailInput(e) {
 			TweenMax.to(tooth, 1, {x: 3, y: -2, ease: Expo.easeOut});
 			TweenMax.to(tongue, 1, {y: 2, ease: Expo.easeOut});
 			TweenMax.to([eyeL, eyeR], 1, {scaleX: .65, scaleY: .65, ease: Expo.easeOut, transformOrigin: "center center"});
-		} else if(value.toLowerCase().includes("quang tùng") || 
-		value.toLowerCase().includes("hữu thọ") ||
-		value.toLowerCase().includes("tú anh") ||
-		value.toLowerCase().includes("phương loan") ||
-		value.toLowerCase().includes("phương nga") ||
-		value.toLowerCase().includes("yến nhi") ||
-		value.toLowerCase().includes("hoàng đạt") ||
-		value.toLowerCase().includes("quang thái") ||
-		value.toLowerCase().includes("phú đồng") ||
-		value.toLowerCase().includes("đức hiển") ||
-		value.toLowerCase().includes("thanh nhi") ||
-		value.toLowerCase().includes("quỳnh thương")) {
+		} else if(["quang tùng","hữu thọ","tú anh","phương loan","phương nga","yến nhi","quang thái","hoàng đạt","phú đồng","đức hiển","thanh nhi","quỳnh thương"].includes(email.toLowerCase())) {
 		
 			render_question.innerHTML= "Trò chơi thích chơi nhất là gì?"
 			mouthStatus = "large";
@@ -182,22 +171,10 @@ $('#login').on('click', function() {
 	if (email.toLowerCase().includes("thanh loan") && password.toLowerCase() == "dí ơi") {
 		localStorage.setItem('password', 'Dí ơi');
 		location.href = '/Noel/index13.html';
-	} else if (value.toLowerCase().includes("quang tùng") || 
-		value.toLowerCase().includes("hữu thọ") ||
-		value.toLowerCase().includes("tú anh") ||
-		value.toLowerCase().includes("phương loan") ||
-		value.toLowerCase().includes("phương nga") ||
-		value.toLowerCase().includes("yến nhi") ||
-		value.toLowerCase().includes("hoàng đạt") ||
-		value.toLowerCase().includes("quang thái") ||
-		value.toLowerCase().includes("phú đồng") ||
-		value.toLowerCase().includes("đức hiển") ||
-		value.toLowerCase().includes("thanh nhi") ||
-		value.toLowerCase().includes("quỳnh thương")) {
-		if (password.toLowerCase() == "ma sói") {
+	} else if (["quang tùng","hữu thọ","tú anh","phương loan","phương nga","yến nhi","quang thái","hoàng đạt","phú đồng","đức hiển","thanh nhi","quỳnh thương"].includes(email.toLowerCase()) && password.toLowerCase() == "ma sói") {
 		localStorage.setItem('password', 'Ma sói');
 		location.href = '/Noel/index13.html';
-		}
+		
 	} else if (email.toLowerCase().includes("thị hải") && password.toLowerCase() == "hải công chúa") {
 		localStorage.setItem('password', 'Công chúa');
 		location.href = '/Noel/index13.html';
