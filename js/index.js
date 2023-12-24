@@ -161,10 +161,10 @@ $('#login').on('click', function() {
 	localStorage.removeItem('password');
 	if (email.toLowerCase().includes("thanh loan") && password.toLowerCase() == "dí ơi") {
 		localStorage.setItem('password', 'Dí ơi');
-		location.href = '/index13.html';
+		location.href = '/Noel/index13.html';
 	} else if (["quang tùng","hữu thọ","tú anh","phương loan","phương nga","yến nhi","quang thái","hoàng đạt","phú đồng","đức hiển","thanh nhi"].includes(email.toLowerCase()) && password.toLowerCase() == "ma sói") {
 		localStorage.setItem('password', 'Ma sói');
-		location.href = '/index13.html';
+		location.href = '/Noel/index13.html';
 	} else {
 		$('.indicator').text('Ồ! Sai mất rồi');
 	}
