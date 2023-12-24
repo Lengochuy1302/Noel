@@ -1,13 +1,10 @@
-var lightswitch = document.getElementById("switch"),
-    on = false;
-lightswitch.addEventListener('click', toggleLights, false);
 
 TweenMax.set('.switchnob', {y: '+=90'})
 
 var tl = new TimelineMax({delay: .5});  
 
-function toggleLights(){
-  if(on){
+function toggleLights(on){
+  if(on == false){
     on = false;
     TweenMax.to('.light',.2, {filter:'', opacity: 0.55})
     TweenMax.to('.switchnob',.2, {y: '+=90'})
@@ -58,6 +55,6 @@ $('.checkbox input').on('click',function() {
     setTimeout(() => {
       location.href = '/Noel/index3.html';
     }, 5000);
-    $('#switch').click();
+    toggleLights(true);
   }
 })
