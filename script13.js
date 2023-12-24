@@ -56,7 +56,7 @@ $('.checkbox input').on('click',function() {
       $('#text_help').text('Hãy tiếp tục đến với cây thông Noel nào !');
     }, 2000);
     setTimeout(() => {
-      location.href = '/index3.html';
+      location.href = '/Noel/index3.html';
     }, 5000);
     $('#switch').click();
   }
