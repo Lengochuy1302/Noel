@@ -134,7 +134,7 @@ function onEmailInput(e) {
 			TweenMax.to([eyeL, eyeR], 1, {scaleX: .85, scaleY: .85, ease: Expo.easeOut});
 		} else {
 			mouthStatus = "medium";
-			render_question.innerHTML= "Bạn không thuộc danh sách chúc mừng của tui"
+			render_question.innerHTML= "Bạn nhập sai thì phải"
 			password.style.display = "none";
 			TweenMax.to([mouthBG, mouthOutline, mouthMaskPath], 1, {morphSVG: mouthMediumBG, ease: Expo.easeOut});
 			TweenMax.to(tooth, 1, {x: 0, y: 0, ease: Expo.easeOut});
