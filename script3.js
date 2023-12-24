@@ -146,7 +146,7 @@ const checkBaublePos = (clone, d) => {
 }
 function showStar(){
 	setTimeout(() => {
-		location.href = '/index5.html';
+		location.href = '/Noel/index5.html';
 	}, 2000);
 	let tl = gsap.timeline();
 	tl.to('#star', {
