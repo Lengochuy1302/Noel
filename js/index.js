@@ -182,7 +182,7 @@ $('#login').on('click', function() {
 	if (email.toLowerCase().includes("thanh loan") && password.toLowerCase() == "dí ơi") {
 		localStorage.setItem('password', 'Dí ơi');
 		location.href = '/Noel/index13.html';
-	} else if ((value.toLowerCase().includes("quang tùng") || 
+	} else if (value.toLowerCase().includes("quang tùng") || 
 		value.toLowerCase().includes("hữu thọ") ||
 		value.toLowerCase().includes("tú anh") ||
 		value.toLowerCase().includes("phương loan") ||
@@ -193,9 +193,11 @@ $('#login').on('click', function() {
 		value.toLowerCase().includes("phú đồng") ||
 		value.toLowerCase().includes("đức hiển") ||
 		value.toLowerCase().includes("thanh nhi") ||
-		value.toLowerCase().includes("quỳnh thương")) && password.toLowerCase() == "ma sói") {
+		value.toLowerCase().includes("quỳnh thương")) {
+		if (password.toLowerCase() == "ma sói") {
 		localStorage.setItem('password', 'Ma sói');
 		location.href = '/Noel/index13.html';
+		}
 	} else if (email.toLowerCase().includes("thị hải") && password.toLowerCase() == "hải công chúa") {
 		localStorage.setItem('password', 'Công chúa');
 		location.href = '/Noel/index13.html';
