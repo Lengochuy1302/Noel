@@ -108,8 +108,7 @@ function onEmailInput(e) {
 			TweenMax.to(tooth, 1, {x: 3, y: -2, ease: Expo.easeOut});
 			TweenMax.to(tongue, 1, {y: 2, ease: Expo.easeOut});
 			TweenMax.to([eyeL, eyeR], 1, {scaleX: .65, scaleY: .65, ease: Expo.easeOut, transformOrigin: "center center"});
-		} else if(["quang tùng","hữu thọ","tú anh","phương loan","phương nga","yến nhi","quang thái","hoàng đạt","phú đồng","đức hiển","thanh nhi","quỳnh thương"].includes(email.toLowerCase())) {
-		
+		} else if(["quang tùng","hữu thọ","tú anh","phương loan","phương nga","yến nhi","quang thái","hoàng đạt","phú đồng","đức hiển","thanh nhi","quỳnh thương"].includes(value.toLowerCase())) {
 			render_question.innerHTML= "Trò chơi thích chơi nhất là gì?"
 			mouthStatus = "large";
 			password.style.display = "block";
@@ -135,7 +134,7 @@ function onEmailInput(e) {
 			TweenMax.to([eyeL, eyeR], 1, {scaleX: .85, scaleY: .85, ease: Expo.easeOut});
 		} else {
 			mouthStatus = "medium";
-			render_question.innerHTML= "Bạn nhập sai thì phải"
+			render_question.innerHTML= "Bạn không thuộc danh sách chúc mừng của tui"
 			password.style.display = "none";
 			TweenMax.to([mouthBG, mouthOutline, mouthMaskPath], 1, {morphSVG: mouthMediumBG, ease: Expo.easeOut});
 			TweenMax.to(tooth, 1, {x: 0, y: 0, ease: Expo.easeOut});
@@ -174,7 +173,6 @@ $('#login').on('click', function() {
 	} else if (["quang tùng","hữu thọ","tú anh","phương loan","phương nga","yến nhi","quang thái","hoàng đạt","phú đồng","đức hiển","thanh nhi","quỳnh thương"].includes(email.toLowerCase()) && password.toLowerCase() == "ma sói") {
 		localStorage.setItem('password', 'Ma sói');
 		location.href = '/Noel/index13.html';
-		
 	} else if (email.toLowerCase().includes("thị hải") && password.toLowerCase() == "hải công chúa") {
 		localStorage.setItem('password', 'Công chúa');
 		location.href = '/Noel/index13.html';
