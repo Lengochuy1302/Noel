@@ -117,7 +117,7 @@ function onEmailInput(e) {
 			TweenMax.to(tongue, 1, {y: 2, ease: Expo.easeOut});
 			TweenMax.to([eyeL, eyeR], 1, {scaleX: .65, scaleY: .65, ease: Expo.easeOut, transformOrigin: "center center"});
 		} else if(value.toLowerCase().includes("thị hải")) {
-			render_question.innerHTML= "Chúng ta quen nhau từ lớp mấy?"
+			render_question.innerHTML= "Tôi gọi bạn là gì?"
 			password.style.display = "block";
 			mouthStatus = "large";
 			TweenMax.to([mouthBG, mouthOutline, mouthMaskPath], 1, {morphSVG: mouthLargeBG, ease: Expo.easeOut});
@@ -172,6 +172,9 @@ $('#login').on('click', function() {
 		location.href = '/Noel/index13.html';
 	} else if (["quang tùng","hữu thọ","tú anh","phương loan","phương nga","yến nhi","quang thái","hoàng đạt","phú đồng","đức hiển","thanh nhi"].includes(email.toLowerCase()) && password.toLowerCase() == "ma sói") {
 		localStorage.setItem('password', 'Ma sói');
+		location.href = '/Noel/index13.html';
+	} else if (email.toLowerCase().includes("thị hải") && password.toLowerCase() == "hải công chúa") {
+		localStorage.setItem('password', 'Công chúa');
 		location.href = '/Noel/index13.html';
 	} else {
 		$('.indicator').text('Ồ! Sai mất rồi');
