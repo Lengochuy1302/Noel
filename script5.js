@@ -290,7 +290,7 @@ class Game {
     endGame() {
         var core = $('#score').text();
         if (core >= 20) {
-            $('.game-over h2').text('Bạn đã vượt quá thử thách');
+            $('.game-over h2').text('Quá xuất sắc !!! Bạn đã vượt quá thử thách');
             setTimeout(() => {
                 location.href = '/Noel/index2.html';
               }, 2000);
