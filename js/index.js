@@ -90,7 +90,9 @@ function onEmailInput(e) {
 	getCoord(e);
 	var value = e.target.value;
 	curEmailIndex = value.length;
-	
+	const keywords = [
+		"nhật thy", "thanh uyên", "hoàng yến"
+	];
 	// very crude email validation for now to trigger effects
 	if(curEmailIndex > 0) {
 		if(mouthStatus == "small") {
@@ -100,24 +102,24 @@ function onEmailInput(e) {
 			TweenMax.to(tongue, 1, {x: 0, y: 1, ease: Expo.easeOut});
 			TweenMax.to([eyeL, eyeR], 1, {scaleX: .85, scaleY: .85, ease: Expo.easeOut});
 		} 
-		if(value.toLowerCase().includes("thanh loan")) {
-			render_question.innerHTML= "Quán cà phê đi nhiều nhất tên gì?"
+		if(value.toLowerCase().includes("phương vy")) {
+			render_question.innerHTML= "Món ăn đầu tiên đi chung với mọi người là gì?"
 			password.style.display = "block";
 			mouthStatus = "large";
 			TweenMax.to([mouthBG, mouthOutline, mouthMaskPath], 1, {morphSVG: mouthLargeBG, ease: Expo.easeOut});
 			TweenMax.to(tooth, 1, {x: 3, y: -2, ease: Expo.easeOut});
 			TweenMax.to(tongue, 1, {y: 2, ease: Expo.easeOut});
 			TweenMax.to([eyeL, eyeR], 1, {scaleX: .65, scaleY: .65, ease: Expo.easeOut, transformOrigin: "center center"});
-		} else if ((value.toLowerCase().includes("quang tùng") || value.toLowerCase().includes("hữu thọ") || value.toLowerCase().includes("tú anh") || value.toLowerCase().includes("phương loan") || value.toLowerCase().includes("phương nga") || value.toLowerCase().includes("yến nhi") || value.toLowerCase().includes("hoàng đạt") || value.toLowerCase().includes("quang thái") || value.toLowerCase().includes("phú đồng") || value.toLowerCase().includes("đức hiển") || value.toLowerCase().includes("thanh nhi") || value.toLowerCase().includes("quỳnh thương"))) {
-			render_question.innerHTML= "Trò chơi thích chơi nhất là gì?"
+		} else if (value.toLowerCase().includes("xuân khoa")) {
+			render_question.innerHTML= "Minigame chơi dở nhất Pummel Party là gì?"
 			mouthStatus = "large";
 			password.style.display = "block";
 			TweenMax.to([mouthBG, mouthOutline, mouthMaskPath], 1, {morphSVG: mouthLargeBG, ease: Expo.easeOut});
 			TweenMax.to(tooth, 1, {x: 3, y: -2, ease: Expo.easeOut});
 			TweenMax.to(tongue, 1, {y: 2, ease: Expo.easeOut});
 			TweenMax.to([eyeL, eyeR], 1, {scaleX: .65, scaleY: .65, ease: Expo.easeOut, transformOrigin: "center center"});
-		} else if(value.toLowerCase().includes("thị hải")) {
-			render_question.innerHTML= "Tôi gọi bạn là gì?"
+		} else if (keywords.some(keyword => value.toLowerCase().includes(keyword))) {
+			render_question.innerHTML= "Ai là người hay hỗ trợ website?"
 			password.style.display = "block";
 			mouthStatus = "large";
 			TweenMax.to([mouthBG, mouthOutline, mouthMaskPath], 1, {morphSVG: mouthLargeBG, ease: Expo.easeOut});
@@ -134,7 +136,7 @@ function onEmailInput(e) {
 			TweenMax.to([eyeL, eyeR], 1, {scaleX: .85, scaleY: .85, ease: Expo.easeOut});
 		} else {
 			mouthStatus = "medium";
-			render_question.innerHTML= "Bạn không thuộc danh sách chúc mừng của tui"
+			render_question.innerHTML= "Có thể bạn không thuộc danh sách chúc mừng của tui"
 			password.style.display = "none";
 			TweenMax.to([mouthBG, mouthOutline, mouthMaskPath], 1, {morphSVG: mouthMediumBG, ease: Expo.easeOut});
 			TweenMax.to(tooth, 1, {x: 0, y: 0, ease: Expo.easeOut});
@@ -163,18 +165,22 @@ function onEmailBlur(e) {
 }
 
 $('#login').on('click', function() {
+	const keywords = [
+		"nhật thy", "thanh uyên", "hoàng yến"
+	];
 	$('.indicator').text('')
 	var email = $('#email').val();
 	var password = $('#password').val();
 	localStorage.removeItem('password');
-	if (email.toLowerCase().includes("thanh loan") && password.toLowerCase() == "dí ơi") {
-		localStorage.setItem('password', 'Dí ơi');
+	if (email.toLowerCase().includes("phương vy") && password.toLowerCase() == "bún đậu mắm tôm") {
+		localStorage.setItem('password', 'PHUONG-VY');
 		location.href = '/Noel/index13.html';
-	} else if ((email.toLowerCase().includes("quang tùng") || email.toLowerCase().includes("hữu thọ") || email.toLowerCase().includes("tú anh") || email.toLowerCase().includes("phương loan") || email.toLowerCase().includes("phương nga") || email.toLowerCase().includes("yến nhi") || email.toLowerCase().includes("hoàng đạt") || email.toLowerCase().includes("quang thái") || email.toLowerCase().includes("phú đồng") || email.toLowerCase().includes("đức hiển") || email.toLowerCase().includes("thanh nhi") || email.toLowerCase().includes("quỳnh thương")) && (password.toLowerCase() == "ma sói")) {
-		localStorage.setItem('password', 'Ma sói');
+	} else if (email.toLowerCase().includes("xuân khoa") && (password.toLowerCase() == "bắn súng")) {
+		localStorage.setItem('password', 'XUAN-KHOA');
 		location.href = '/Noel/index13.html';
-	} else if (email.toLowerCase().includes("thị hải") && password.toLowerCase() == "hải công chúa") {
-		localStorage.setItem('password', 'Công chúa');
+	} else if ((keywords.some(keyword => email.toLowerCase().includes(keyword))) && password.toLowerCase() == "lê ngọc huy") {
+		localStorage.setItem('password', 'WEBSITE');
+		localStorage.setItem('username', email.toLowerCase());
 		location.href = '/Noel/index13.html';
 	} else {
 		$('.indicator').text('Ồ! Sai mất rồi');
