@@ -93,6 +93,9 @@ function onEmailInput(e) {
 	const keywords = [
 		"nhật thy", "thanh uyên", "hoàng yến"
 	];
+	const keywords2 = [
+		"thanh hằng", "như quỳnh"
+	];
 	// very crude email validation for now to trigger effects
 	if(curEmailIndex > 0) {
 		if(mouthStatus == "small") {
@@ -120,6 +123,14 @@ function onEmailInput(e) {
 			TweenMax.to([eyeL, eyeR], 1, {scaleX: .65, scaleY: .65, ease: Expo.easeOut, transformOrigin: "center center"});
 		} else if (keywords.some(keyword => value.toLowerCase().includes(keyword))) {
 			render_question.innerHTML= "Ai là người hay hỗ trợ website?"
+			password.style.display = "block";
+			mouthStatus = "large";
+			TweenMax.to([mouthBG, mouthOutline, mouthMaskPath], 1, {morphSVG: mouthLargeBG, ease: Expo.easeOut});
+			TweenMax.to(tooth, 1, {x: 3, y: -2, ease: Expo.easeOut});
+			TweenMax.to(tongue, 1, {y: 2, ease: Expo.easeOut});
+			TweenMax.to([eyeL, eyeR], 1, {scaleX: .65, scaleY: .65, ease: Expo.easeOut, transformOrigin: "center center"});
+		} else if (keywords2.some(keyword2 => value.toLowerCase().includes(keyword2))) {
+			render_question.innerHTML= "Năm sinh của Lê Ngọc Huy là bao nhiêu 🤣"
 			password.style.display = "block";
 			mouthStatus = "large";
 			TweenMax.to([mouthBG, mouthOutline, mouthMaskPath], 1, {morphSVG: mouthLargeBG, ease: Expo.easeOut});
@@ -168,6 +179,9 @@ $('#login').on('click', function() {
 	const keywords = [
 		"nhật thy", "thanh uyên", "hoàng yến"
 	];
+	const keywords2 = [
+		"thanh hằng", "như quỳnh"
+	];
 	$('.indicator').text('')
 	var email = $('#email').val();
 	var password = $('#password').val();
@@ -180,6 +194,10 @@ $('#login').on('click', function() {
 		location.href = '/Noel/index13.html';
 	} else if ((keywords.some(keyword => email.toLowerCase().includes(keyword))) && password.toLowerCase() == "lê ngọc huy") {
 		localStorage.setItem('password', 'WEBSITE');
+		localStorage.setItem('username', email.toLowerCase());
+		location.href = '/Noel/index13.html';
+	} else if ((keywords2.some(keywords2 => email.toLowerCase().includes(keywords2))) && password.toLowerCase() == "thầy huy") {
+		localStorage.setItem('password', 'VNDC');
 		localStorage.setItem('username', email.toLowerCase());
 		location.href = '/Noel/index13.html';
 	} else {
