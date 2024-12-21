@@ -196,7 +196,7 @@ $('#login').on('click', function() {
 		localStorage.setItem('password', 'WEBSITE');
 		localStorage.setItem('username', email.toLowerCase());
 		location.href = '/Noel/index13.html';
-	} else if ((keywords2.some(keywords2 => email.toLowerCase().includes(keywords2))) && password.toLowerCase() == "thầy huy") {
+	} else if ((keywords2.some(keywords2 => email.toLowerCase().includes(keywords2))) && password.toLowerCase() == "2002") {
 		localStorage.setItem('password', 'VNDC');
 		localStorage.setItem('username', email.toLowerCase());
 		location.href = '/Noel/index13.html';
