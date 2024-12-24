@@ -94,7 +94,7 @@ function onEmailInput(e) {
 		"nhật thy", "thanh uyên", "hoàng yến"
 	];
 	const keywords2 = [
-		"thúy hằng", "như quỳnh"
+		"thuý hằng", "như quỳnh"
 	];
 	// very crude email validation for now to trigger effects
 	if(curEmailIndex > 0) {
@@ -180,7 +180,7 @@ $('#login').on('click', function() {
 		"nhật thy", "thanh uyên", "hoàng yến"
 	];
 	const keywords2 = [
-		"thúy hằng", "như quỳnh"
+		"thuý hằng", "như quỳnh"
 	];
 	$('.indicator').text('')
 	var email = $('#email').val();
