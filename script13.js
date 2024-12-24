@@ -21,10 +21,10 @@ var total = 30;
 var warp = document.getElementById("container"),	w = window.innerWidth , h = window.innerHeight;
  
  for (i=0; i<total; i++){ 
-   var Div = document.createElement('div');
-   TweenLite.set(Div,{attr:{class:'dot'},x:R(0,w),y:R(-200,-150),z:R(-200,200)});
-   warp.appendChild(Div);
-   animm(Div);
+  //  var Div = document.createElement('div');
+  //  TweenLite.set(Div,{attr:{class:'dot'},x:R(0,w),y:R(-200,-150),z:R(-200,200)});
+  //  warp.appendChild(Div);
+  //  animm(Div);
  }
  
  function animm(elm){   
